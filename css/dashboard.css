@@ -1,0 +1,408 @@
+/* ============================================
+   AURUM — Admin Dashboard Styles
+   ============================================ */
+
+/* ── Layout Setup ── */
+.dashboard-body {
+  display: flex;
+  min-height: 100vh;
+  background: #0d0d0d;
+  font-family: var(--font-body);
+  color: #e5e5e5;
+  overflow: hidden;
+}
+
+/* Sidebar panel */
+.db-sidebar {
+  width: 260px;
+  background: #141414;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: width var(--transition-base);
+  z-index: 50;
+}
+
+.db-sidebar.collapsed {
+  width: 80px;
+}
+
+.db-sidebar-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.db-sidebar-logo {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.db-sidebar.collapsed .db-sidebar-logo span {
+  display: none;
+}
+
+.db-sidebar-collapse-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.db-sidebar-menu {
+  flex-grow: 1;
+  padding: var(--space-4) 0;
+  overflow-y: auto;
+}
+
+.db-menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-6);
+  color: var(--text-secondary);
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: var(--text-sm);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.db-menu-item:hover,
+.db-menu-item.active {
+  color: var(--color-gold);
+  background: rgba(201, 168, 76, 0.06);
+  border-left: 3px solid var(--color-gold);
+}
+
+.db-menu-item-icon {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+.db-sidebar.collapsed .db-menu-item span {
+  display: none;
+}
+
+/* ── Main Content Area ── */
+.db-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.db-topbar {
+  height: 80px;
+  background: #141414;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-8);
+  flex-shrink: 0;
+}
+
+.db-page-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-medium);
+}
+
+.db-user-profile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.db-bell-btn {
+  font-size: 20px;
+  position: relative;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.db-bell-dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--color-ruby);
+  border-radius: 50%;
+}
+
+.db-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-gold);
+  background: #252525;
+}
+
+/* Content panels wrapper */
+.db-content {
+  flex-grow: 1;
+  padding: var(--space-8);
+  overflow-y: auto;
+}
+
+.db-panel {
+  display: none;
+}
+
+.db-panel.active {
+  display: block;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* ── Overview Panel Elements ── */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.kpi-card {
+  background: #141414;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.kpi-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: rgba(201, 168, 76, 0.08);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.kpi-number {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.kpi-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+}
+
+.kpi-trend {
+  font-size: 11px;
+  margin-top: var(--space-1);
+}
+
+.trend-up { color: var(--color-emerald); }
+.trend-down { color: var(--color-error); }
+
+/* ── Pure CSS Bar Chart styling ── */
+.chart-card {
+  background: #141414;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.bar-chart-container {
+  height: 220px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 var(--space-4);
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.bar-chart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.bar-fill-column {
+  width: 28px;
+  background: var(--gradient-gold);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  height: 0; /* Animate height in JS */
+  transition: height 1s var(--ease-out-expo);
+  position: relative;
+}
+
+.bar-fill-column:hover .bar-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bar-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-black);
+  border: 1px solid var(--border-gold);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  z-index: 10;
+}
+
+.bar-label-axis {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-top: var(--space-2);
+}
+
+/* ── Visual Table Layout Grid ── */
+.tables-map-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.table-layout-card {
+  background: #141414;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  text-align: center;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.table-layout-card:hover {
+  border-color: var(--border-gold);
+}
+
+.table-icon-visual {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--space-3);
+  background: #252525;
+  border: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--weight-bold);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.table-layout-card.shape-round .table-icon-visual {
+  border-radius: 50%;
+}
+
+.table-layout-card.shape-rectangular .table-icon-visual {
+  width: 90px;
+  border-radius: var(--radius-sm);
+}
+
+/* Status colors for table grid visual cards */
+.table-layout-card.status-available .table-icon-visual { border-color: var(--color-emerald); color: var(--color-emerald); }
+.table-layout-card.status-occupied .table-icon-visual { border-color: var(--color-error); color: var(--color-error); }
+.table-layout-card.status-reserved .table-icon-visual { border-color: var(--color-warning); color: var(--color-warning); }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tables-map-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .db-sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    width: 100% !important;
+    border-right: none;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    flex-direction: row;
+  }
+  
+  .db-sidebar-header {
+    display: none;
+  }
+  
+  .db-sidebar-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .db-menu-item {
+    flex-direction: column;
+    padding: var(--space-2) 0;
+    font-size: 10px;
+    justify-content: center;
+    border-left: none !important;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .db-menu-item.active {
+    border-bottom-color: var(--color-gold);
+  }
+  
+  .db-main {
+    height: calc(100vh - 64px);
+  }
+  
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tables-map-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

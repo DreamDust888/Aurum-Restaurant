@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Digital Menu — Aurum Premium Fine Dining</title>
+  <meta name="description" content="Explore the full digital menu of Aurum. Browse over 50 gourmet selections, signature starters, steaks, seafood, desserts, fine wines, and custom cocktail mixes.">
+  <link rel="canonical" href="https://aurum-restaurant.com/menu.html">
+
+  <!-- Typography Preloads -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/menu-page.css">
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div class="preloader" role="status" aria-label="Loading menu page">
+    <div class="preloader-logo">AURUM</div>
+    <div class="preloader-line"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Grain Overlay Effect -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="nav" role="banner">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Aurum Home">
+        <svg class="nav-logo-icon" viewBox="0 0 100 100" fill="currentColor">
+          <polygon points="50,10 90,80 10,80" fill="none" stroke="var(--color-gold)" stroke-width="4" />
+          <circle cx="50" cy="50" r="15" fill="var(--color-gold)" />
+        </svg>
+        <span>Aurum</span>
+      </a>
+
+      <nav class="nav-links" role="navigation" aria-label="Desktop menu">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link active">Menu</a>
+        <a href="index.html#signature" class="nav-link">Signature Dishes</a>
+        <a href="index.html#experiences" class="nav-link">Dining</a>
+        <a href="index.html#chef" class="nav-link">Chef</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="private-dining.html" class="nav-link">Private Dining</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="index.html#reviews" class="nav-link">Reviews</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle light theme" title="Toggle theme">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+        </button>
+
+        <div class="lang-switch">
+          <button class="lang-switch-btn" aria-label="Select language">
+            <span class="lang-text">EN</span>
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor">
+              <path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div class="lang-dropdown">
+            <button class="lang-option active" data-lang="EN">English</button>
+            <button class="lang-option" data-lang="FR">Français</button>
+            <button class="lang-option" data-lang="ES">Español</button>
+            <button class="lang-option" data-lang="JP">日本語</button>
+          </div>
+        </div>
+
+        <a href="reservation.html" class="nav-reserve-btn">Reserve</a>
+      </div>
+
+      <button class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+        <div class="hamburger-lines">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu-links">
+      <a href="index.html#about" class="mobile-menu-link">About</a>
+      <a href="menu.html" class="mobile-menu-link">Menu</a>
+      <a href="index.html#signature" class="mobile-menu-link">Signature Dishes</a>
+      <a href="index.html#experiences" class="mobile-menu-link">Dining</a>
+      <a href="index.html#chef" class="mobile-menu-link">Chef</a>
+      <a href="gallery.html" class="mobile-menu-link">Gallery</a>
+      <a href="private-dining.html" class="mobile-menu-link">Private Dining</a>
+      <a href="events.html" class="mobile-menu-link">Events</a>
+      <a href="index.html#reviews" class="mobile-menu-link">Reviews</a>
+      <a href="index.html#contact" class="mobile-menu-link">Contact</a>
+      <a href="reservation.html" class="mobile-menu-link text-accent">Reserve Table</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Short Hero -->
+    <section class="menu-hero" aria-label="Menu Introduction">
+      <div class="menu-hero-img" style="background: url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200') center/cover no-repeat"></div>
+      <div class="menu-hero-content">
+        <span class="section-label">Culinary Artistry</span>
+        <h1 class="menu-hero-title">Our Digital Menu</h1>
+        <p class="menu-hero-subtitle">Meticulously selected flavors and ingredients crafted to perfection</p>
+      </div>
+    </section>
+
+    <!-- Search and Filters Panel -->
+    <div class="menu-controls">
+      <div class="container">
+        <!-- Search -->
+        <div class="search-bar-wrapper">
+          <input type="text" placeholder="Search dishes, ingredients, or keywords..." class="search-input" aria-label="Search the menu">
+          <span class="search-icon">🔍</span>
+        </div>
+
+        <!-- Dietary checkboxes -->
+        <div class="dietary-filters-row">
+          <label class="form-check">
+            <input type="checkbox" value="vegetarian">
+            <span>Vegetarian (V)</span>
+          </label>
+          <label class="form-check">
+            <input type="checkbox" value="vegan">
+            <span>Vegan (VG)</span>
+          </label>
+          <label class="form-check">
+            <input type="checkbox" value="gluten-free">
+            <span>Gluten Free (GF)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Sections List Grid container -->
+    <div class="container section-sm" id="main-menu-grid">
+      <!-- Category Tabs (Horizontal pills list) -->
+      <div class="filter-tabs" data-filter-grid="menu-sections-container">
+        <button class="filter-tab active" data-filter="all">Full Menu</button>
+        <button class="filter-tab" data-filter="starters">Starters</button>
+        <button class="filter-tab" data-filter="soups">Soups</button>
+        <button class="filter-tab" data-filter="salads">Salads</button>
+        <button class="filter-tab" data-filter="seafood">Seafood</button>
+        <button class="filter-tab" data-filter="vegetarian">Vegetarian</button>
+        <button class="filter-tab" data-filter="main-course">Main Course</button>
+        <button class="filter-tab" data-filter="steaks">Steaks</button>
+        <button class="filter-tab" data-filter="sushi">Sushi</button>
+        <button class="filter-tab" data-filter="desserts">Desserts</button>
+        <button class="filter-tab" data-filter="beverages">Beverages</button>
+        <button class="filter-tab" data-filter="cocktails">Cocktails</button>
+        <button class="filter-tab" data-filter="wine">Wine</button>
+      </div>
+
+      <!-- Seasonal Banner Highlight -->
+      <div class="seasonal-banner reveal">
+        <div class="seasonal-banner-text">
+          <span class="badge badge-gold" style="margin-bottom: var(--space-2)">Special Offer</span>
+          <h3 class="seasonal-banner-title">Seasonal Winter Truffle Week</h3>
+          <p class="seasonal-banner-desc">Savor five exclusive creations featuring freshly imported white winter truffles, curated by Chef Alessandro Moretti. Available for a limited time only.</p>
+        </div>
+        <div class="seasonal-banner-btn">
+          <a href="reservation.html" class="btn btn-primary">Book Truffle Dinner</a>
+        </div>
+      </div>
+
+      <!-- Dynamic Menu Sections Container -->
+      <div id="menu-sections-container">
+        <!-- Rendered dynamically by menu.js -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4 grid-auto-sm mb-12">
+        <div>
+          <h3 class="nav-logo mb-4" style="padding:0">
+            <svg class="nav-logo-icon" viewBox="0 0 100 100" fill="currentColor">
+              <polygon points="50,10 90,80 10,80" fill="none" stroke="var(--color-gold)" stroke-width="4"/>
+              <circle cx="50" cy="50" r="15" fill="var(--color-gold)"/>
+            </svg>
+            <span>Aurum</span>
+          </h3>
+          <p class="footer-desc">Crafting world-class culinary experiences combining tradition and modern innovations since 2010.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <nav class="footer-links">
+            <a href="index.html#about" class="footer-link">Our Story</a>
+            <a href="menu.html" class="footer-link">Digital Menu</a>
+            <a href="gallery.html" class="footer-link">Photo Gallery</a>
+            <a href="private-dining.html" class="footer-link">Private Dinings</a>
+            <a href="events.html" class="footer-link">Special Events</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Dining Hours</h4>
+          <div class="footer-hours-list">
+            <div class="footer-hours-row">
+              <span class="footer-hours-day">Lunch:</span>
+              <span class="footer-hours-time">12:00 PM - 3:00 PM</span>
+            </div>
+            <div class="footer-hours-row">
+              <span class="footer-hours-day">Dinner:</span>
+              <span class="footer-hours-time">6:00 PM - 11:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <p class="text-sm mb-4">42 Rue de la Gastronomie, Paris</p>
+          <p class="text-sm">📞 +33 1 42 86 87 88</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Aurum Restaurant. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTAs -->
+  <button class="back-to-top" aria-label="Scroll back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- JavaScript Scripts -->
+  <script src="data/menu-data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

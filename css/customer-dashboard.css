@@ -1,0 +1,197 @@
+/* ============================================
+   AURUM — Customer Portal Styles
+   ============================================ */
+
+/* ── Layout ── */
+.customer-body {
+  background: #0f0d0b;
+  font-family: var(--font-body);
+  color: var(--color-white);
+  min-height: 100vh;
+}
+
+/* User Card Header */
+.customer-header-hero {
+  background: linear-gradient(180deg, #1c1510 0%, #0f0d0b 100%);
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-12) 0 var(--space-8);
+  position: relative;
+}
+
+.profile-summary-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.profile-badge-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.profile-avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--color-gold);
+  background: #252525;
+}
+
+.profile-name {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-1);
+}
+
+.loyalty-summary-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-6);
+  text-align: right;
+  min-width: 250px;
+}
+
+/* Tabs list */
+.customer-tabs {
+  display: flex;
+  gap: var(--space-1);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--space-8);
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.customer-tab-btn {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.customer-tab-btn:hover,
+.customer-tab-btn.active {
+  color: var(--color-gold);
+  border-bottom-color: var(--color-gold);
+}
+
+/* ── Panel sections ── */
+.customer-panel {
+  display: none;
+}
+
+.customer-panel.active {
+  display: block;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Upcoming bookings visual */
+.upcoming-booking-card {
+  background: linear-gradient(145deg, #1c1510 0%, #14110e 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-gold);
+  margin-bottom: var(--space-6);
+}
+
+.upcoming-date-box {
+  font-family: var(--font-display);
+  color: var(--color-gold);
+  font-size: var(--text-lg);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+/* Favorites card grid */
+.favorite-dish-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+}
+
+.favorite-dish-card:hover {
+  border-color: var(--border-gold);
+}
+
+.fav-dish-info h4 {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+  margin-bottom: 2px;
+}
+
+.fav-dish-info p {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* ── Gift card visual card ── */
+.giftcard-visual-element {
+  height: 180px;
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-black) 100%);
+  border: 1px solid var(--border-gold);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-4);
+  position: relative;
+  overflow: hidden;
+}
+
+.giftcard-visual-element::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.giftcard-logo {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-gold);
+  letter-spacing: var(--tracking-wider);
+}
+
+.giftcard-balance {
+  font-size: var(--text-3xl);
+  font-family: var(--font-body);
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-summary-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .loyalty-summary-card {
+    text-align: left;
+    width: 100%;
+  }
+}

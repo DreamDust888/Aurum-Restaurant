@@ -1,0 +1,221 @@
+/* ============================================
+   AURUM — Responsive Styles Overrides
+   ============================================ */
+
+/* ── Large Desktop & 4K (1440px +) ── */
+@media (min-width: 1440px) {
+  .container {
+    max-width: var(--container-2xl);
+  }
+}
+
+/* ── Standard Desktop & Laptop (1025px - 1200px) ── */
+@media (max-width: 1200px) {
+  :root {
+    --nav-height: 72px;
+  }
+  
+  .split-layout, .split-layout-reverse {
+    gap: var(--space-8);
+  }
+}
+
+/* ── Tablet Viewport (769px - 1024px) ── */
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 5rem;
+  }
+
+  /* About section details */
+  .about-image-collage {
+    height: 380px;
+    margin-top: var(--space-8);
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: var(--space-10);
+    padding: var(--space-6) 0;
+  }
+
+  /* Chef biography */
+  .chef-portrait-box {
+    height: 420px;
+    margin-bottom: var(--space-8);
+  }
+
+  /* Sidebar dashboard overlays */
+  .db-sidebar {
+    width: 80px;
+  }
+  .db-sidebar-logo span,
+  .db-menu-item span {
+    display: none;
+  }
+
+  /* Tables layout map */
+  .tables-map-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── Mobile Viewports (481px - 768px) ── */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 4rem;
+    --nav-height: 64px;
+  }
+
+  /* Hide custom cursor circles on touch devices */
+  .custom-cursor {
+    display: none !important;
+  }
+  body.has-custom-cursor,
+  body.has-custom-cursor * {
+    cursor: auto !important;
+  }
+
+  /* Main headings font adjustments */
+  h1, .h1 { font-size: var(--text-3xl); }
+  h2, .h2 { font-size: var(--text-2xl); }
+  
+  .hero-title {
+    font-size: var(--text-4xl);
+  }
+
+  /* Floating 예약 widget overlay overlap */
+  .reservation-widget {
+    margin: -40px var(--space-4) var(--space-12);
+    padding: var(--space-5);
+  }
+
+  .widget-form {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  .widget-submit {
+    grid-column: 1 / -1;
+  }
+
+  /* Double columns split layouts */
+  .split-layout, .split-layout-reverse {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .split-layout-reverse > :first-child { order: 1; }
+  .split-layout-reverse > :last-child { order: 2; }
+
+  /* Grid item layouts */
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  .loyalty-tiers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .carousel-prev { left: -10px; }
+  .carousel-next { right: -10px; }
+
+  /* Admin dashboard collapses to bottom navigation tabs */
+  .dashboard-body {
+    flex-direction: column;
+  }
+
+  .db-sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    width: 100% !important;
+    flex-direction: row;
+    border-right: none;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    background: #141414;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.3);
+  }
+
+  .db-sidebar-header {
+    display: none;
+  }
+
+  .db-sidebar-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    width: 100%;
+  }
+
+  .db-menu-item {
+    flex-direction: column;
+    padding: var(--space-2) 0;
+    font-size: 9px;
+    align-items: center;
+    border-left: none !important;
+    border-bottom: 2px solid transparent;
+    flex: 1;
+  }
+
+  .db-menu-item.active {
+    border-bottom-color: var(--color-gold);
+    background: transparent;
+  }
+
+  .db-main {
+    height: calc(100vh - 60px);
+  }
+
+  .db-topbar {
+    height: 64px;
+    padding: 0 var(--space-4);
+  }
+
+  .db-content {
+    padding: var(--space-4);
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tables-map-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Narrow Mobile Devices (480px and down) ── */
+@media (max-width: 480px) {
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  .widget-form {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .loyalty-tiers {
+    grid-template-columns: 1fr;
+  }
+
+  .insta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .seating-zones-grid {
+    grid-template-columns: 1fr;
+  }
+}

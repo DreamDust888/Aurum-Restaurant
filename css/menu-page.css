@@ -1,0 +1,279 @@
+/* ============================================
+   AURUM — Digital Menu Page Styles
+   ============================================ */
+
+/* ── Menu Hero ── */
+.menu-hero {
+  position: relative;
+  height: 45vh;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--color-black);
+  overflow: hidden;
+}
+
+.menu-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.4) 0%, var(--bg-primary) 100%);
+  z-index: 1;
+}
+
+.menu-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  animation: kenBurns 20s ease-in-out infinite;
+}
+
+.menu-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-4);
+}
+
+.menu-hero-title {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+.menu-hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-gold);
+}
+
+/* ── Search & Filter Controls ── */
+.menu-controls {
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--space-10);
+  background: var(--bg-secondary);
+}
+
+.search-bar-wrapper {
+  max-width: 600px;
+  margin: 0 auto var(--space-6);
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--space-4) var(--space-12) var(--space-4) var(--space-5);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  font-size: var(--text-base);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.search-icon {
+  position: absolute;
+  right: var(--space-5);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* Dietary Filter checkboxes row */
+.dietary-filters-row {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+/* ── Menu Grid & Items ── */
+.menu-section {
+  margin-bottom: var(--space-16);
+}
+
+.menu-section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--space-3);
+}
+
+.menu-section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.menu-section-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--border-gold), transparent);
+}
+
+/* Menu Row/List View (Elegant restaurant styling) */
+.menu-item-row {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item-row:hover {
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.menu-item-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.menu-item-title-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.menu-item-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+.menu-item-price {
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+  color: var(--color-gold);
+  font-size: var(--text-lg);
+}
+
+.menu-item-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* Expandable content area */
+.menu-item-expandable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow), margin-top var(--transition-slow);
+}
+
+.menu-item-row.expanded .menu-item-expandable {
+  max-height: 180px;
+  margin-top: var(--space-4);
+  border-top: 1px dashed var(--border-color);
+  padding-top: var(--space-4);
+}
+
+.menu-expanded-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.detail-block h5 {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: var(--tracking-wider);
+  margin-bottom: var(--space-1);
+}
+
+.detail-block p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* ── Seasonal Specials Panel ── */
+.seasonal-banner {
+  background: linear-gradient(135deg, var(--color-burgundy), var(--color-black));
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  margin-bottom: var(--space-16);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.seasonal-banner::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.seasonal-banner-text {
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.seasonal-banner-title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+.seasonal-banner-desc {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: var(--leading-relaxed);
+}
+
+.seasonal-banner-btn {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive overrides */
+@media (max-width: 768px) {
+  .menu-expanded-details {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+}

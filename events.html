@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Events & Dining Programs — Aurum Restaurant</title>
+  <meta name="description" content="Explore special culinary events at Aurum. Book our Sunday Brunch, Wine Tasting Nights, Live Jazz Evenings, Valentine's Dinner, or New Year's Eve Gala.">
+  <link rel="canonical" href="https://aurum-restaurant.com/events.html">
+
+  <!-- Typography Preloads -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div class="preloader" role="status" aria-label="Loading events page">
+    <div class="preloader-logo">AURUM</div>
+    <div class="preloader-line"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Grain Overlay Effect -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="nav" role="banner">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Aurum Home">
+        <svg class="nav-logo-icon" viewBox="0 0 100 100" fill="currentColor">
+          <polygon points="50,10 90,80 10,80" fill="none" stroke="var(--color-gold)" stroke-width="4" />
+          <circle cx="50" cy="50" r="15" fill="var(--color-gold)" />
+        </svg>
+        <span>Aurum</span>
+      </a>
+
+      <nav class="nav-links" role="navigation" aria-label="Desktop menu">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="index.html#signature" class="nav-link">Signature Dishes</a>
+        <a href="index.html#experiences" class="nav-link">Dining</a>
+        <a href="index.html#chef" class="nav-link">Chef</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="private-dining.html" class="nav-link">Private Dining</a>
+        <a href="events.html" class="nav-link active">Events</a>
+        <a href="index.html#reviews" class="nav-link">Reviews</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle light theme" title="Toggle theme">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+        </button>
+
+        <div class="lang-switch">
+          <button class="lang-switch-btn" aria-label="Select language">
+            <span class="lang-text">EN</span>
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor">
+              <path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div class="lang-dropdown">
+            <button class="lang-option active" data-lang="EN">English</button>
+            <button class="lang-option" data-lang="FR">Français</button>
+            <button class="lang-option" data-lang="ES">Español</button>
+            <button class="lang-option" data-lang="JP">日本語</button>
+          </div>
+        </div>
+
+        <a href="reservation.html" class="nav-reserve-btn">Reserve</a>
+      </div>
+
+      <button class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+        <div class="hamburger-lines">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu-links">
+      <a href="index.html#about" class="mobile-menu-link">About</a>
+      <a href="menu.html" class="mobile-menu-link">Menu</a>
+      <a href="index.html#signature" class="mobile-menu-link">Signature Dishes</a>
+      <a href="index.html#experiences" class="mobile-menu-link">Dining</a>
+      <a href="index.html#chef" class="mobile-menu-link">Chef</a>
+      <a href="gallery.html" class="mobile-menu-link">Gallery</a>
+      <a href="private-dining.html" class="mobile-menu-link">Private Dining</a>
+      <a href="events.html" class="mobile-menu-link">Events</a>
+      <a href="index.html#reviews" class="mobile-menu-link">Reviews</a>
+      <a href="index.html#contact" class="mobile-menu-link">Contact</a>
+      <a href="reservation.html" class="mobile-menu-link text-accent">Reserve Table</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Short Hero -->
+    <section class="menu-hero" aria-label="Events Introduction">
+      <div class="menu-hero-img" style="background: url('https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=1200') center/cover no-repeat"></div>
+      <div class="menu-hero-content">
+        <span class="section-label">Gastronomy Calendar</span>
+        <h1 class="menu-hero-title">Exclusive Events</h1>
+        <p class="menu-hero-subtitle">Curated dining programs, live music series, and seasonal holiday packages</p>
+      </div>
+    </section>
+
+    <!-- Events List Section -->
+    <section class="section">
+      <div class="container">
+        <!-- Filter Pills -->
+        <div class="filter-tabs reveal" data-filter-grid="events-grid-container">
+          <button class="filter-tab active" data-filter="all">All Events</button>
+          <button class="filter-tab" data-filter="recurring">Weekly Series</button>
+          <button class="filter-tab" data-filter="seasonal">Holiday Galas</button>
+          <button class="filter-tab" data-filter="package">Experiences Packages</button>
+        </div>
+
+        <!-- Events Grid list -->
+        <div class="grid grid-3 grid-auto-lg reveal" id="events-grid-container" data-stagger-parent>
+          
+          <!-- Event 1 -->
+          <div class="card event-card stagger-1" data-category="recurring">
+            <div class="event-img-wrapper">
+              <div class="event-img h-full" style="background: url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600') center/cover no-repeat"></div>
+              <div class="event-date-badge">Every<br>Sunday</div>
+            </div>
+            <div class="event-info">
+              <span class="badge badge-gold mb-2">Weekly Series</span>
+              <h3 class="event-title">Sunday Brunch Extraordinaire</h3>
+              <p class="event-desc">Enjoy a lavish Sunday brunch spread with live cooking stations, a premium raw oyster bar, champagne bar, and fresh pastries. Accompanied by live jazz music.</p>
+              <div class="event-price">$45 per person</div>
+              <a href="reservation.html" class="btn btn-primary mt-auto">Reserve Brunch Table</a>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="card event-card stagger-2" data-category="recurring">
+            <div class="event-img-wrapper">
+              <div class="event-img h-full" style="background: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=600') center/cover no-repeat"></div>
+              <div class="event-date-badge">Every<br>Friday</div>
+            </div>
+            <div class="event-info">
+              <span class="badge badge-gold mb-2">Weekly Series</span>
+              <h3 class="event-title">Sommelier's Wine Tasting Night</h3>
+              <p class="event-desc">Explore premium vintages from Bordeaux, Burgundy, and Piedmont. Take a sensory tasting tour with our master sommelier. Five wines paired with artisanal cheeses.</p>
+              <div class="event-price">$75 per person</div>
+              <a href="reservation.html" class="btn btn-primary mt-auto">Book Tasting Spot</a>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="card event-card stagger-3" data-category="recurring">
+            <div class="event-img-wrapper">
+              <div class="event-img h-full" style="background: url('https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=600') center/cover no-repeat"></div>
+              <div class="event-date-badge">Every<br>Saturday</div>
+            </div>
+            <div class="event-info">
+              <span class="badge badge-gold mb-2">Weekly Series</span>
+              <h3 class="event-title">Live Jazz Evening</h3>
+              <p class="event-desc">Enjoy soulful world-class jazz band performances on our rooftop lounge, while enjoying custom mixology cocktails and a select late-night menu.</p>
+              <div class="event-price">$60 per person (includes 2 cocktails)</div>
+              <a href="reservation.html" class="btn btn-primary mt-auto">Reserve Rooftop Spot</a>
+            </div>
+          </div>
+
+          <!-- Event 4 -->
+          <div class="card event-card stagger-4" data-category="seasonal">
+            <div class="event-img-wrapper">
+              <div class="event-img h-full" style="background: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=600') center/cover no-repeat"></div>
+              <div class="event-date-badge">Feb 14<br>2025</div>
+            </div>
+            <div class="event-info">
+              <span class="badge badge-burgundy mb-2">Holiday Gala</span>
+              <h3 class="event-title">Valentine's Day Dinner</h3>
+              <p class="event-desc">A romantic candlelight seven-course tasting menu with champagne toasts, rose petal table arrangements, and live acoustic violin performance.</p>
+              <div class="event-price">$150 per couple</div>
+              <a href="reservation.html" class="btn btn-primary mt-auto">Book Valentine's Table</a>
+            </div>
+          </div>
+
+          <!-- Event 5 -->
+          <div class="card event-card stagger-5" data-category="package">
+            <div class="event-img-wrapper">
+              <div class="event-img h-full" style="background: url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=600') center/cover no-repeat"></div>
+              <div class="event-date-badge">Daily<br>Booking</div>
+            </div>
+            <div class="event-info">
+              <span class="badge badge-copper mb-2">Experience Package</span>
+              <h3 class="event-title">Anniversary Celebration Package</h3>
+              <p class="event-desc">Make milestones unforgettable. Includes a private alcove table, 5-course tasting menu, bottle of Dom Pérignon, custom chocolate cake, and rose arrangements.</p>
+              <div class="event-price">$200 per couple</div>
+              <a href="reservation.html" class="btn btn-primary mt-auto">Reserve Anniversary Table</a>
+            </div>
+          </div>
+
+          <!-- Event 6 -->
+          <div class="card event-card stagger-6" data-category="seasonal">
+            <div class="event-img-wrapper">
+              <div class="event-img h-full" style="background: url('https://images.unsplash.com/photo-1482862549707-f63cb32c5fd9?q=80&w=600') center/cover no-repeat"></div>
+              <div class="event-date-badge">Dec 31<br>2025</div>
+            </div>
+            <div class="event-info">
+              <span class="badge badge-burgundy mb-2">Holiday Gala</span>
+              <h3 class="event-title">New Year's Eve Gala</h3>
+              <p class="event-desc">Ring in the New Year with an 8-course gala dinner, premium open bar, live orchestra, midnight champagne toasts, and private rooftop fireworks viewing.</p>
+              <div class="event-price">$250 per person</div>
+              <a href="reservation.html" class="btn btn-primary mt-auto">Book NYE Gala Tickets</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Past Events Retrospective Gallery Section -->
+    <section class="section" style="background: var(--bg-secondary)">
+      <div class="container">
+        <div class="text-center mb-8 reveal">
+          <h2 class="section-title">Past Celebrations</h2>
+          <p class="section-subtitle">Take a peek at highlights from our historical events</p>
+        </div>
+        <div class="grid grid-3 grid-auto-lg reveal">
+          <div class="card attraction-card">
+            <div class="attraction-img-wrapper">
+              <div class="attraction-img h-full" style="background: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400') center/cover no-repeat"></div>
+            </div>
+            <div class="attraction-info">
+              <h3 class="attraction-title">Solfeggio Wine Masterclass</h3>
+              <p class="attraction-desc">Retrospective of Bordeaux Grand Cru tasting event, hosted in our Private Cellar room in September 2024.</p>
+            </div>
+          </div>
+          <div class="card attraction-card">
+            <div class="attraction-img-wrapper">
+              <div class="attraction-img h-full" style="background: url('https://images.unsplash.com/photo-1549417229-aa67d3263c09?q=80&w=400') center/cover no-repeat"></div>
+            </div>
+            <div class="attraction-info">
+              <h3 class="attraction-title">Gastronomy Art Exhibition</h3>
+              <p class="attraction-desc">An evening blending modern oil paintings and creative food textures, held in July 2024.</p>
+            </div>
+          </div>
+          <div class="card attraction-card">
+            <div class="attraction-img-wrapper">
+              <div class="attraction-img h-full" style="background: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=400') center/cover no-repeat"></div>
+            </div>
+            <div class="attraction-info">
+              <h3 class="attraction-title">Midsummer Night Dinner</h3>
+              <p class="attraction-desc">Under the stars in our Outdoor Garden. 5-course summer menu pairing white truffles and champagne, June 2024.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Inquiry Form Section -->
+    <section class="section" id="event-inquiry">
+      <div class="container max-width-md">
+        <div class="contact-form-container reveal">
+          <div class="text-center mb-8">
+            <span class="section-label">Organize / Reserve</span>
+            <h2 class="section-title">Host Private Functions</h2>
+            <p class="section-subtitle">Plan custom banquets, weddings, or corporate gala celebrations with our dedicated event managers</p>
+          </div>
+
+          <form class="contact-form">
+            <div class="grid grid-2 mb-4">
+              <div class="form-group">
+                <label class="form-label" for="inquiry-name">Full Name</label>
+                <input type="text" id="inquiry-name" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="inquiry-email">Email Address</label>
+                <input type="email" id="inquiry-email" class="form-input" required>
+              </div>
+            </div>
+            <div class="grid grid-3 mb-4">
+              <div class="form-group">
+                <label class="form-label" for="inquiry-phone">Phone Number</label>
+                <input type="tel" id="inquiry-phone" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="inquiry-date">Preferred Date</label>
+                <input type="date" id="inquiry-date" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="inquiry-guests">Expected Guests</label>
+                <select id="inquiry-guests" class="form-select">
+                  <option value="10-20">10 - 20 Guests</option>
+                  <option value="21-50">21 - 50 Guests</option>
+                  <option value="51-100">51 - 100 Guests</option>
+                  <option value="100+">100+ Guests</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group mb-6">
+              <label class="form-label" for="inquiry-type">Event Type</label>
+              <select id="inquiry-type" class="form-select">
+                <option value="corporate">Corporate Banquet Dinner</option>
+                <option value="wedding">Wedding / Anniversary Gala</option>
+                <option value="cocktail">Private Cocktail Reception</option>
+                <option value="other">Custom Celebration</option>
+              </select>
+            </div>
+            <div class="form-group mb-6">
+              <label class="form-label" for="inquiry-details">Additional Details / Special Requests</label>
+              <textarea id="inquiry-details" class="form-textarea" placeholder="Tell us about your theme, catering needs, bar preferences..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Submit Event Proposal Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4 grid-auto-sm mb-12">
+        <div>
+          <h3 class="nav-logo mb-4" style="padding:0">
+            <svg class="nav-logo-icon" viewBox="0 0 100 100" fill="currentColor">
+              <polygon points="50,10 90,80 10,80" fill="none" stroke="var(--color-gold)" stroke-width="4"/>
+              <circle cx="50" cy="50" r="15" fill="var(--color-gold)"/>
+            </svg>
+            <span>Aurum</span>
+          </h3>
+          <p class="footer-desc">Crafting world-class culinary experiences combining tradition and modern innovations since 2010.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <nav class="footer-links">
+            <a href="index.html#about" class="footer-link">Our Story</a>
+            <a href="menu.html" class="footer-link">Digital Menu</a>
+            <a href="gallery.html" class="footer-link">Photo Gallery</a>
+            <a href="private-dining.html" class="footer-link">Private Dinings</a>
+            <a href="events.html" class="footer-link">Special Events</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Dining Hours</h4>
+          <div class="footer-hours-list">
+            <div class="footer-hours-row">
+              <span class="footer-hours-day">Lunch:</span>
+              <span class="footer-hours-time">12:00 PM - 3:00 PM</span>
+            </div>
+            <div class="footer-hours-row">
+              <span class="footer-hours-day">Dinner:</span>
+              <span class="footer-hours-time">6:00 PM - 11:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <p class="text-sm mb-4">42 Rue de la Gastronomie, Paris</p>
+          <p class="text-sm">📞 +33 1 42 86 87 88</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Aurum Restaurant. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTAs -->
+  <button class="back-to-top" aria-label="Scroll back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/utils.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Event page specific form toast trigger
+      const form = document.querySelector('.contact-form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          showToast('success', 'Inquiry Submitted', 'Your event proposal inquiry was sent. An events manager will contact you within 24 hours.', 4000);
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

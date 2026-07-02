@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel Dashboard — Aurum Restaurant</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- Left Sidebar Panel -->
+  <aside class="db-sidebar" role="navigation" aria-label="Dashboard sidebar menu">
+    <div class="db-sidebar-header">
+      <div class="db-sidebar-logo">
+        <span style="color:var(--color-gold)">🌟</span>
+        <span>Aurum Admin</span>
+      </div>
+      <button class="db-sidebar-collapse-btn" aria-label="Collapse sidebar">&larr;</button>
+    </div>
+    
+    <nav class="db-sidebar-menu">
+      <button class="db-menu-item active" data-target="overview">
+        <span class="db-menu-item-icon">📊</span>
+        <span>Overview</span>
+      </button>
+      <button class="db-menu-item" data-target="reservations">
+        <span class="db-menu-item-icon">📅</span>
+        <span>Reservations</span>
+      </button>
+      <button class="db-menu-item" data-target="tables">
+        <span class="db-menu-item-icon">🛋️</span>
+        <span>Table Layout Map</span>
+      </button>
+      <button class="db-menu-item" data-target="menu-manage">
+        <span class="db-menu-item-icon">📜</span>
+        <span>Menu List</span>
+      </button>
+      <button class="db-menu-item" data-target="settings">
+        <span class="db-menu-item-icon">⚙️</span>
+        <span>Settings</span>
+      </button>
+      <a href="../index.html" class="db-menu-item" style="margin-top:auto">
+        <span class="db-menu-item-icon">🏠</span>
+        <span>View Live Site</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Right Main Panel -->
+  <main class="db-main">
+    
+    <!-- Topbar Header -->
+    <header class="db-topbar">
+      <h1 class="db-page-title">Overview</h1>
+      
+      <div class="db-user-profile">
+        <!-- Notification bell -->
+        <button class="db-bell-btn" aria-label="View notifications">
+          🔔
+          <span class="db-bell-dot"></span>
+        </button>
+        <!-- User avatar -->
+        <div class="db-avatar" style="background: url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=100') center/cover"></div>
+        <span class="text-sm font-semibold">Chef Alessandro</span>
+      </div>
+    </header>
+
+    <!-- Content Panel sections -->
+    <div class="db-content">
+      
+      <!-- 1. OVERVIEW PANEL -->
+      <section class="db-panel active" id="overview">
+        <!-- KPI Cards Grid -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon">📅</div>
+            <div>
+              <span class="kpi-label">Today's Bookings</span>
+              <div class="kpi-number">24</div>
+              <span class="kpi-trend trend-up">↑ 12% vs yesterday</span>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon">💵</div>
+            <div>
+              <span class="kpi-label">Today's Revenue</span>
+              <div class="kpi-number" id="kpi-today-sales">$4,850</div>
+              <span class="kpi-trend trend-up">↑ 8% vs yesterday</span>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon">👥</div>
+            <div>
+              <span class="kpi-label">Today's Guests</span>
+              <div class="kpi-number">86</div>
+              <span class="kpi-trend trend-down">↓ 3% vs yesterday</span>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon">⭐</div>
+            <div>
+              <span class="kpi-label">Average Ratings</span>
+              <div class="kpi-number">4.9 / 5.0</div>
+              <span class="kpi-trend trend-up">⭐ Excellent score</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weekly Revenue Chart -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h4>Weekly Revenue Performance</h4>
+            <span class="badge badge-gold">Last 7 Days</span>
+          </div>
+          <div class="bar-chart-container">
+            <!-- Monday -->
+            <div class="bar-chart-item">
+              <div class="bar-fill-column"><div class="bar-tooltip">$3,200</div></div>
+              <span class="bar-label-axis">Mon</span>
+            </div>
+            <!-- Tuesday -->
+            <div class="bar-chart-item">
+              <div class="bar-fill-column"><div class="bar-tooltip">$2,800</div></div>
+              <span class="bar-label-axis">Tue</span>
+            </div>
+            <!-- Wednesday -->
+            <div class="bar-chart-item">
+              <div class="bar-fill-column"><div class="bar-tooltip">$3,600</div></div>
+              <span class="bar-label-axis">Wed</span>
+            </div>
+            <!-- Thursday -->
+            <div class="bar-chart-item">
+              <div class="bar-fill-column"><div class="bar-tooltip">$4,100</div></div>
+              <span class="bar-label-axis">Thu</span>
+            </div>
+            <!-- Friday -->
+            <div class="bar-chart-item">
+              <div class="bar-fill-column"><div class="bar-tooltip">$5,800</div></div>
+              <span class="bar-label-axis">Fri</span>
+            </div>
+            <!-- Saturday -->
+            <div class="bar-chart-item">
+              <div class="bar-fill-column"><div class="bar-tooltip">$6,200</div></div>
+              <span class="bar-label-axis">Sat</span>
+            </div>
+            <!-- Sunday -->
+            <div class="bar-chart-item">
+              <div class="bar-fill-column"><div class="bar-tooltip">$4,850</div></div>
+              <span class="bar-label-axis">Sun</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Reservations log table -->
+        <div class="card p-6">
+          <h4 class="mb-4">Recent Bookings Log</h4>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Booking Code</th>
+                <th>Guest Name</th>
+                <th>Date</th>
+                <th>Time Slot</th>
+                <th>Guests</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="overview-reservations-tbody">
+              <!-- Rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 2. RESERVATIONS LIST PANEL -->
+      <section class="db-panel" id="reservations">
+        <div class="card p-6">
+          <div class="flex-between mb-6">
+            <h4>Manage Reservations Roster</h4>
+            <div class="flex gap-4">
+              <input type="text" placeholder="Search guests..." class="form-input" style="max-width: 250px">
+            </div>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Booking Code</th>
+                <th>Guest Name</th>
+                <th>Date</th>
+                <th>Time Slot</th>
+                <th>Guests</th>
+                <th>Seating Zone</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="full-reservations-tbody">
+              <!-- Rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 3. VISUAL TABLES MAP PANEL -->
+      <section class="db-panel" id="tables">
+        <div class="card p-6">
+          <div class="flex-between mb-6">
+            <h4>Seating Zone Table Plan</h4>
+            <div class="flex gap-4 items-center">
+              <span class="status status-confirmed">● Available</span>
+              <span class="status status-cancelled">● Occupied</span>
+              <span class="status status-pending">● Reserved</span>
+            </div>
+          </div>
+          <p class="text-sm text-muted mb-4">Click table card to toggle status between Available, Occupied, and Reserved.</p>
+          <div class="tables-map-grid" id="tables-map-grid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. MENU LIST PANEL -->
+      <section class="db-panel" id="menu-manage">
+        <div class="card p-6">
+          <div class="flex-between mb-6">
+            <h4>Menu Inventory Management</h4>
+            <button class="btn btn-primary btn-sm">&plus; Add Menu Item</button>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Item ID</th>
+                <th>Dish Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Calories</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="menu-management-tbody">
+              <!-- Rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 5. SETTINGS PANEL -->
+      <section class="db-panel" id="settings">
+        <div class="card p-6 max-width-md">
+          <h4 class="mb-6">Global Restaurant Parameters</h4>
+          <form class="contact-form">
+            <div class="form-group mb-4">
+              <label class="form-label" for="setting-name">Restaurant Brand Name</label>
+              <input type="text" id="setting-name" class="form-input" value="Aurum Fine Dining">
+            </div>
+            <div class="form-group mb-4">
+              <label class="form-label" for="setting-email">Notification Alert Email</label>
+              <input type="email" id="setting-email" class="form-input" value="alerts@aurum-restaurant.com">
+            </div>
+            <div class="grid grid-2 mb-4">
+              <div class="form-group">
+                <label class="form-label" for="setting-lunch">Lunch Hours Opening</label>
+                <input type="time" id="setting-lunch" class="form-input" value="12:00">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="setting-dinner">Dinner Hours Closing</label>
+                <input type="time" id="setting-dinner" class="form-input" value="23:00">
+              </div>
+            </div>
+            <div class="form-group mb-6">
+              <label class="form-label" for="setting-deposit">Table Booking Deposit ($ USD)</label>
+              <input type="number" id="setting-deposit" class="form-input" value="100">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="showToast('success', 'Parameters Saved', 'Restaurant parameters updated successfully.', 3000)">Save Parameters Settings</button>
+          </form>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- JavaScript Scripts -->
+  <script src="../data/menu-data.js"></script>
+  <script src="../data/reviews-data.js"></script>
+  <script src="../data/events-data.js"></script>
+  <script src="../data/reservations-data.js"></script>
+  
+  <script src="../js/utils.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

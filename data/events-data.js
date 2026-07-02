@@ -1,0 +1,137 @@
+/* ============================================
+   AURUM — Events Data
+   Special events and promotions
+   ============================================ */
+
+'use strict';
+
+const EVENTS_DATA = [
+  {
+    id: 1,
+    name: 'Sunday Brunch Extraordinaire',
+    description: 'Indulge in our lavish Sunday brunch featuring live cooking stations, a premium champagne bar, freshly baked pastries, and an exquisite seafood display. Live jazz accompaniment.',
+    date: 'Every Sunday',
+    time: '11:00 AM - 3:00 PM',
+    price: 45,
+    priceType: 'per person',
+    category: 'recurring',
+    availability: 'available',
+    maxGuests: 60,
+    currentBookings: 38,
+    features: ['Live Cooking Stations', 'Champagne Bar', 'Live Jazz', 'Kids Corner'],
+    image: 'sunday-brunch.jpg',
+    isFeatured: true
+  },
+  {
+    id: 2,
+    name: 'Wine Tasting Night',
+    description: 'Join our sommelier for an exclusive evening exploring premium wines from Bordeaux, Burgundy, and Tuscany. Five wines paired with artisanal cheeses and canapés.',
+    date: 'Every Friday',
+    time: '7:00 PM - 10:00 PM',
+    price: 75,
+    priceType: 'per person',
+    category: 'recurring',
+    availability: 'limited',
+    maxGuests: 24,
+    currentBookings: 20,
+    features: ['5 Premium Wines', 'Expert Commentary', 'Cheese Pairing', 'Take-Home Notes'],
+    image: 'wine-tasting.jpg',
+    isFeatured: true
+  },
+  {
+    id: 3,
+    name: 'Live Jazz Evening',
+    description: 'Enjoy world-class jazz performances while savoring our signature cocktails and specially curated small plates. An evening of soulful music and culinary artistry.',
+    date: 'Every Saturday',
+    time: '8:00 PM - 12:00 AM',
+    price: 60,
+    priceType: 'per person (includes 2 cocktails)',
+    category: 'recurring',
+    availability: 'available',
+    maxGuests: 40,
+    currentBookings: 28,
+    features: ['Live Jazz Band', '2 Signature Cocktails', 'Small Plates Menu', 'Rooftop Venue'],
+    image: 'jazz-evening.jpg',
+    isFeatured: false
+  },
+  {
+    id: 4,
+    name: "Valentine's Day Dinner",
+    description: "A romantic seven-course tasting menu with champagne toast, rose petal table décor, and a personalized dessert. Create unforgettable memories with your special someone.",
+    date: 'February 14, 2025',
+    time: '7:00 PM - 11:00 PM',
+    price: 150,
+    priceType: 'per couple',
+    category: 'seasonal',
+    availability: 'limited',
+    maxGuests: 30,
+    currentBookings: 26,
+    features: ['7-Course Menu', 'Champagne Toast', 'Rose Décor', 'Personalized Dessert', 'Live Violin'],
+    image: 'valentines.jpg',
+    isFeatured: true
+  },
+  {
+    id: 5,
+    name: 'Anniversary Celebration Package',
+    description: "Celebrate your milestone with a premium private dining experience. Includes a five-course menu, champagne, personalized cake, and a complimentary anniversary photo session.",
+    date: 'Available Daily',
+    time: 'By Reservation',
+    price: 200,
+    priceType: 'per couple',
+    category: 'package',
+    availability: 'available',
+    maxGuests: 12,
+    currentBookings: 3,
+    features: ['5-Course Menu', 'Dom Pérignon', 'Custom Cake', 'Photo Session', 'Rose Arrangement'],
+    image: 'anniversary.jpg',
+    isFeatured: false
+  },
+  {
+    id: 6,
+    name: "Chef's Special Week",
+    description: "A week-long celebration of Chef Alessandro's new seasonal creations. Experience exclusive dishes not available on the regular menu, featuring rare ingredients sourced globally.",
+    date: 'March 10-16, 2025',
+    time: '6:00 PM - 10:00 PM',
+    price: 85,
+    priceType: 'per person (tasting menu)',
+    category: 'seasonal',
+    availability: 'available',
+    maxGuests: 35,
+    currentBookings: 12,
+    features: ['Exclusive Menu', 'Chef Interaction', 'Rare Ingredients', 'Wine Pairing Option (+$40)'],
+    image: 'chef-special.jpg',
+    isFeatured: true
+  },
+  {
+    id: 7,
+    name: 'Christmas Eve Dinner',
+    description: 'A magical Christmas Eve celebration with a six-course festive menu, mulled wine welcome, carol performances, and a visit from our pastry chef\'s spectacular dessert trolley.',
+    date: 'December 24, 2025',
+    time: '6:00 PM - 11:00 PM',
+    price: 120,
+    priceType: 'per person',
+    category: 'seasonal',
+    availability: 'available',
+    maxGuests: 50,
+    currentBookings: 0,
+    features: ['6-Course Festive Menu', 'Mulled Wine', 'Carol Performances', 'Dessert Trolley', 'Gift Bag'],
+    image: 'christmas.jpg',
+    isFeatured: false
+  },
+  {
+    id: 8,
+    name: "New Year's Eve Gala",
+    description: "Ring in the New Year with an extraordinary eight-course gala dinner, premium open bar, live entertainment, midnight champagne toast, and a spectacular fireworks viewing from our rooftop.",
+    date: 'December 31, 2025',
+    time: '8:00 PM - 2:00 AM',
+    price: 250,
+    priceType: 'per person',
+    category: 'seasonal',
+    availability: 'available',
+    maxGuests: 80,
+    currentBookings: 0,
+    features: ['8-Course Gala', 'Open Bar', 'Live Band', 'Midnight Toast', 'Rooftop Fireworks', 'Party Favors'],
+    image: 'new-year.jpg',
+    isFeatured: true
+  }
+];

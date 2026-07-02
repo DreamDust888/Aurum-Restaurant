@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer VIP Portal — Aurum Restaurant</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/customer-dashboard.css">
+</head>
+<body class="customer-body">
+
+  <!-- Main Hero Profile Header -->
+  <header class="customer-header-hero">
+    <div class="container">
+      <div class="profile-summary-flex">
+        
+        <div class="profile-badge-box">
+          <div class="profile-avatar-large" style="background: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100') center/cover"></div>
+          <div>
+            <span class="badge badge-gold mb-1">Gold Club Member</span>
+            <h1 class="profile-name" id="profile-hero-name">Isabella Fontaine</h1>
+            <p class="text-sm text-muted">Member since Nov 2024 • ID: #AUR-VIP-843</p>
+          </div>
+        </div>
+
+        <div class="loyalty-summary-card">
+          <p class="text-xs text-muted uppercase">Club Points Balance</p>
+          <div class="price text-gold">
+            <span class="price-amount">2,450</span>
+            <span class="price-period">Points</span>
+          </div>
+          <p class="text-xs text-muted">Next Tier: Platinum (3,000 Pts)</p>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="container section-sm" style="padding-top:var(--space-6)">
+    
+    <!-- Tab navigation buttons -->
+    <div class="customer-tabs">
+      <button class="customer-tab-btn active" data-target="overview">Overview</button>
+      <button class="customer-tab-btn" data-target="reservations">Reservations History</button>
+      <button class="customer-tab-btn" data-target="favorites">Favorite Dishes</button>
+      <button class="customer-tab-btn" data-target="loyalty">Club Loyalty</button>
+      <button class="customer-tab-btn" data-target="giftcards">Gift Cards</button>
+      <button class="customer-tab-btn" data-target="profile">Profile Settings</button>
+      <button class="customer-tab-btn" data-target="invoices">Invoices</button>
+      <a href="../index.html" class="customer-tab-btn" style="margin-left:auto; color:var(--color-gold)">&larr; Return to Main Site</a>
+    </div>
+
+    <!-- 1. OVERVIEW PANEL -->
+    <section class="customer-panel active" id="overview">
+      <div class="split-layout">
+        <!-- Upcoming Reservation -->
+        <div>
+          <h3 class="h4 mb-4">Upcoming Booking</h3>
+          <div id="upcoming-bookings-container">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Loyalty progress highlight -->
+        <div class="card p-6">
+          <h3 class="h4 mb-4">Loyalty Progress</h3>
+          <div class="loyalty-progress-container mb-4">
+            <div class="flex-between text-sm mb-1">
+              <span>Next Reward Milestone</span>
+              <span class="text-gold">81% Complete</span>
+            </div>
+            <div class="loyalty-progress-bar">
+              <div class="loyalty-progress-fill" style="width: 81%"></div>
+            </div>
+          </div>
+          <p class="text-sm text-secondary">Earn 550 more points to unlock a complimentary signature bottle selection chosen by our sommelier on your next table visit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. RESERVATIONS PANEL -->
+    <section class="customer-panel" id="reservations">
+      <div class="card p-6">
+        <h3 class="h4 mb-6">Historical Bookings Log</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Booking Code</th>
+              <th>Date</th>
+              <th>Time Slot</th>
+              <th>Guests</th>
+              <th>Seating Zone</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="past-history-tbody">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. FAVORITE DISHES PANEL -->
+    <section class="customer-panel" id="favorites">
+      <div class="card p-6">
+        <h3 class="h4 mb-6">Your Favorite Plats</h3>
+        <div class="grid grid-2 gap-4" id="favorites-grid-list">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CLUB LOYALTY PANEL -->
+    <section class="customer-panel" id="loyalty">
+      <div class="card p-6">
+        <h3 class="h4 mb-4">Club Gold Member Status</h3>
+        <p class="mb-6">You are a valued Gold Club member at Aurum. You enjoy special reservation priorities, custom tasting menus, and complimentary anniversary cakes.</p>
+        
+        <div class="grid grid-3">
+          <div class="card p-4 text-center">
+            <span style="font-size:32px">🍾</span>
+            <h4 class="mt-2 mb-1">Anniversary Champagne</h4>
+            <p class="text-xs text-muted">Complimentary Dom Pérignon bottle toast on anniversary reservations.</p>
+          </div>
+          <div class="card p-4 text-center">
+            <span style="font-size:32px">🛋️</span>
+            <h4 class="mt-2 mb-1">Seating Priority</h4>
+            <p class="text-xs text-muted">Automatic window seat or rooftop alcove reservations upgrade priority.</p>
+          </div>
+          <div class="card p-4 text-center">
+            <span style="font-size:32px">🍰</span>
+            <h4 class="mt-2 mb-1">Birthday Desserts</h4>
+            <p class="text-xs text-muted">Bespoke chocolate soufflé or custom cakes sent from our pastry chef.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. GIFT CARDS PANEL -->
+    <section class="customer-panel" id="giftcards">
+      <div class="split-layout">
+        <!-- Gift Card visual -->
+        <div>
+          <h3 class="h4 mb-4">Active Gift Cards</h3>
+          <div class="giftcard-visual-element">
+            <span class="giftcard-logo">AURUM GIFT</span>
+            <div class="giftcard-balance">$150.00</div>
+            <div class="flex-between text-xs opacity-75">
+              <span>Card: **** **** **** 4028</span>
+              <span>Exp: 12/28</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Buy card widget -->
+        <div class="card p-6">
+          <h3 class="h4 mb-4">Purchase New Gift Card</h3>
+          <form class="contact-form" onsubmit="return false;">
+            <div class="form-group mb-4">
+              <label class="form-label" for="gift-denomination">Select Denomination Value</label>
+              <select id="gift-denomination" class="form-select">
+                <option value="50">$50.00 USD</option>
+                <option value="100" selected>$100.00 USD</option>
+                <option value="150">$150.00 USD</option>
+                <option value="200">$200.00 USD</option>
+                <option value="500">$500.00 USD</option>
+              </select>
+            </div>
+            <div class="form-group mb-6">
+              <label class="form-label" for="gift-recipient">Recipient Email Address</label>
+              <input type="email" id="gift-recipient" class="form-input" placeholder="e.g. friend@email.com">
+            </div>
+            <button type="button" id="btn-buy-giftcard" class="btn btn-primary btn-full">Order Gift Card</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PROFILE SETTINGS PANEL -->
+    <section class="customer-panel" id="profile">
+      <div class="card p-6 max-width-md">
+        <h3 class="h4 mb-6">Personal Account Details</h3>
+        <form class="contact-form" id="profile-details-form">
+          <div class="grid grid-2 mb-4">
+            <div class="form-group">
+              <label class="form-label" for="prof-name">Full Name</label>
+              <input type="text" id="prof-name" class="form-input" value="Isabella Fontaine" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="prof-email">Email Address</label>
+              <input type="email" id="prof-email" class="form-input" value="isabella.f@email.com" required>
+            </div>
+          </div>
+          <div class="grid grid-2 mb-4">
+            <div class="form-group">
+              <label class="form-label" for="prof-phone">Phone Number</label>
+              <input type="tel" id="prof-phone" class="form-input" value="+33 6 12 34 56 78" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="prof-birthday">Birthday Date</label>
+              <input type="date" id="prof-birthday" class="form-input" value="1992-05-18">
+            </div>
+          </div>
+          <div class="form-group mb-6">
+            <label class="form-label" for="prof-diet">Allergies & Dietary Restrictions</label>
+            <input type="text" id="prof-diet" class="form-input" value="Shellfish allergy, lactose sensitivity">
+          </div>
+          <button type="submit" class="btn btn-primary">Save Profile Settings</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 7. INVOICES PANEL -->
+    <section class="customer-panel" id="invoices">
+      <div class="card p-6">
+        <h3 class="h4 mb-6">Invoices History</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Invoice Code</th>
+              <th>Date</th>
+              <th>Amount Charged</th>
+              <th>Payment Status</th>
+              <th>PDF Download</th>
+            </tr>
+          </thead>
+          <tbody id="invoices-history-tbody">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JavaScript Scripts -->
+  <script src="../data/menu-data.js"></script>
+  <script src="../data/reviews-data.js"></script>
+  <script src="../data/events-data.js"></script>
+  <script src="../data/reservations-data.js"></script>
+  
+  <script src="../js/utils.js"></script>
+  <script src="../js/customer-dashboard.js"></script>
+</body>
+</html>

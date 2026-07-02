@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve a Table — Aurum Premium Fine Dining</title>
+  <meta name="description" content="Book your fine dining table at Aurum. Complete our effortless 5-step table reservation workflow online. Choose dates, seating preference, and special occasions.">
+  <link rel="canonical" href="https://aurum-restaurant.com/reservation.html">
+
+  <!-- Typography Preloads -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/menu-page.css">
+  <link rel="stylesheet" href="css/reservation.css">
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div class="preloader" role="status" aria-label="Loading reservation page">
+    <div class="preloader-logo">AURUM</div>
+    <div class="preloader-line"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Grain Overlay Effect -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="nav" role="banner">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Aurum Home">
+        <svg class="nav-logo-icon" viewBox="0 0 100 100" fill="currentColor">
+          <polygon points="50,10 90,80 10,80" fill="none" stroke="var(--color-gold)" stroke-width="4" />
+          <circle cx="50" cy="50" r="15" fill="var(--color-gold)" />
+        </svg>
+        <span>Aurum</span>
+      </a>
+
+      <nav class="nav-links" role="navigation" aria-label="Desktop menu">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="index.html#signature" class="nav-link">Signature Dishes</a>
+        <a href="index.html#experiences" class="nav-link">Dining</a>
+        <a href="index.html#chef" class="nav-link">Chef</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="private-dining.html" class="nav-link">Private Dining</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="index.html#reviews" class="nav-link">Reviews</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle light theme" title="Toggle theme">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+        </button>
+
+        <div class="lang-switch">
+          <button class="lang-switch-btn" aria-label="Select language">
+            <span class="lang-text">EN</span>
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor">
+              <path d="M1 1L5 5L9 1" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div class="lang-dropdown">
+            <button class="lang-option active" data-lang="EN">English</button>
+            <button class="lang-option" data-lang="FR">Français</button>
+            <button class="lang-option" data-lang="ES">Español</button>
+            <button class="lang-option" data-lang="JP">日本語</button>
+          </div>
+        </div>
+
+        <a href="reservation.html" class="nav-reserve-btn">Reserve</a>
+      </div>
+
+      <button class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+        <div class="hamburger-lines">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu-links">
+      <a href="index.html#about" class="mobile-menu-link">About</a>
+      <a href="menu.html" class="mobile-menu-link">Menu</a>
+      <a href="index.html#signature" class="mobile-menu-link">Signature Dishes</a>
+      <a href="index.html#experiences" class="mobile-menu-link">Dining</a>
+      <a href="index.html#chef" class="mobile-menu-link">Chef</a>
+      <a href="gallery.html" class="mobile-menu-link">Gallery</a>
+      <a href="private-dining.html" class="mobile-menu-link">Private Dining</a>
+      <a href="events.html" class="mobile-menu-link">Events</a>
+      <a href="index.html#reviews" class="mobile-menu-link">Reviews</a>
+      <a href="index.html#contact" class="mobile-menu-link">Contact</a>
+      <a href="reservation.html" class="mobile-menu-link text-accent">Reserve Table</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Short Hero -->
+    <section class="menu-hero" aria-label="Reservation Introduction">
+      <div class="menu-hero-img" style="background: url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=1200') center/cover no-repeat"></div>
+      <div class="menu-hero-content">
+        <span class="section-label">Fine Dining</span>
+        <h1 class="menu-hero-title">Table Booking</h1>
+        <p class="menu-hero-subtitle">Complete our effortless 5-step table reservation workflow</p>
+      </div>
+    </section>
+
+    <!-- Reservation Flow Multi-step Card wrapper -->
+    <section class="section">
+      <div class="container">
+        
+        <!-- Step Indicators -->
+        <div class="steps reveal">
+          <div class="step active">
+            <div class="step-number">1</div>
+            <div class="step-label">Time & Date</div>
+          </div>
+          <div class="step-line"></div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-label">Details</div>
+          </div>
+          <div class="step-line"></div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-label">Review</div>
+          </div>
+          <div class="step-line"></div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-label">Payment</div>
+          </div>
+          <div class="step-line"></div>
+          <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-label">Complete</div>
+          </div>
+        </div>
+
+        <!-- Main Form Box -->
+        <div class="reservation-flow-box reveal">
+          
+          <!-- STEP 1 PANEL -->
+          <div class="reservation-step-panel active">
+            <h3 class="widget-title mb-6">Select Date & Time</h3>
+            
+            <div class="grid grid-2 mb-6">
+              <!-- Calendar picker -->
+              <div>
+                <label class="form-label mb-2">Select Day of Month</label>
+                <div class="booking-calendar-grid">
+                  <!-- Generated by JS -->
+                </div>
+              </div>
+              
+              <!-- Details fields -->
+              <div>
+                <div class="form-group mb-4">
+                  <label class="form-label" for="reserve-guests">Number of Guests</label>
+                  <select id="reserve-guests" class="form-select">
+                    <option value="1">1 Guest</option>
+                    <option value="2" selected>2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="6">6 Guests</option>
+                    <option value="8">8 Guests</option>
+                    <option value="10">10 Guests</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Available Seating Zones</label>
+                  <div class="seating-zones-grid mt-2">
+                    <div class="seating-zone-card active" data-zone="Indoor">
+                      <div class="zone-title">🛋️ Indoor Hall</div>
+                      <span class="zone-avail-indicator text-accent">● Available</span>
+                    </div>
+                    <div class="seating-zone-card" data-zone="Outdoor">
+                      <div class="zone-title">🌿 Outdoor Garden</div>
+                      <span class="zone-avail-indicator text-accent">● Limited</span>
+                    </div>
+                    <div class="seating-zone-card" data-zone="Rooftop">
+                      <div class="zone-title">🥂 Rooftop Bar</div>
+                      <span class="zone-avail-indicator text-accent">● filling fast</span>
+                    </div>
+                    <div class="seating-zone-card" data-zone="Private">
+                      <div class="zone-title">🍷 Wine Cellar</div>
+                      <span class="zone-avail-indicator text-accent">● booked out</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Time Slots -->
+            <div class="form-group">
+              <label class="form-label mb-3">Select Arrival Time Slot</label>
+              <div class="booking-time-grid">
+                <button class="time-slot-btn" data-time="12:00">12:00 PM</button>
+                <button class="time-slot-btn" data-time="12:30">12:30 PM</button>
+                <button class="time-slot-btn" data-time="13:00">1:00 PM</button>
+                <button class="time-slot-btn" data-time="18:00">6:00 PM</button>
+                <button class="time-slot-btn" data-time="18:30">6:30 PM</button>
+                <button class="time-slot-btn" data-time="19:00">7:00 PM</button>
+                <button class="time-slot-btn" data-time="19:30">7:30 PM</button>
+                <button class="time-slot-btn" data-time="20:00">8:00 PM</button>
+                <button class="time-slot-btn" data-time="20:30">8:30 PM</button>
+                <button class="time-slot-btn" data-time="21:00">9:00 PM</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2 PANEL -->
+          <div class="reservation-step-panel">
+            <h3 class="widget-title mb-6">Guest Personal Details</h3>
+            
+            <div class="grid grid-2 mb-4">
+              <div class="form-group">
+                <label class="form-label" for="reserve-name">Full Name</label>
+                <input type="text" id="reserve-name" class="form-input" placeholder="e.g. Isabella Fontaine" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reserve-email">Email Address</label>
+                <input type="email" id="reserve-email" class="form-input" placeholder="e.g. isabella.f@mail.com" required>
+              </div>
+            </div>
+            
+            <div class="grid grid-2 mb-4">
+              <div class="form-group">
+                <label class="form-label" for="reserve-phone">Phone Number</label>
+                <input type="tel" id="reserve-phone" class="form-input" placeholder="e.g. +33 6 1234 5678" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reserve-occasion">Occasion Type</label>
+                <select id="reserve-occasion" class="form-select">
+                  <option value="None" selected>None</option>
+                  <option value="Birthday">Birthday</option>
+                  <option value="Anniversary">Anniversary</option>
+                  <option value="Business">Business Dinner</option>
+                  <option value="Celebration">Celebration / Gala</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reserve-requests">Dietary Preferences & Special Requests</label>
+              <textarea id="reserve-requests" class="form-textarea" placeholder="Describe food allergies, window seats preferences, champagne arrangements..."></textarea>
+            </div>
+          </div>
+
+          <!-- STEP 3 PANEL -->
+          <div class="reservation-step-panel">
+            <h3 class="widget-title mb-6">Review & Apply Coupons</h3>
+            <p class="text-sm mb-4">Verify reservation summary. Apply coupon codes to deduct deposit charges.</p>
+            
+            <!-- Summary card wrapper -->
+            <div id="summary-wrapper">
+              <!-- Rendered by JS -->
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="coupon-code">Promotion Coupon Code</label>
+              <div class="coupon-row mt-2">
+                <input type="text" id="coupon-code" class="form-input" style="max-width: 250px" placeholder="e.g. AURUM20">
+                <button id="btn-apply-coupon" class="btn btn-secondary">Apply Coupon</button>
+              </div>
+              <p class="text-xs text-muted">Use coupon code <strong class="text-accent">AURUM20</strong> to get 20% off mock deposit.</p>
+            </div>
+          </div>
+
+          <!-- STEP 4 PANEL -->
+          <div class="reservation-step-panel">
+            <h3 class="widget-title mb-6">Table Booking Payment</h3>
+            <p class="text-sm mb-6">Select mock payment method to authorize table deposit locks.</p>
+
+            <div class="payment-methods-row">
+              <div class="payment-method-card active" data-method="card">
+                <span>💳 Credit Card</span>
+              </div>
+              <div class="payment-method-card" data-method="restaurant">
+                <span>🍽️ Pay at Restaurant</span>
+              </div>
+            </div>
+
+            <!-- Card details wrappers -->
+            <div id="card-form-wrapper">
+              <div class="payment-card-visual">
+                <div class="flex-between">
+                  <div class="payment-card-chip"></div>
+                  <span style="font-size: var(--text-base); opacity:0.8">AURUM VIP</span>
+                </div>
+                <div class="payment-card-number">•••• •••• •••• ••••</div>
+                <div class="payment-card-meta">
+                  <div>
+                    <span style="display:block; font-size:8px; opacity:0.6">Card Holder</span>
+                    <span class="payment-card-holder">GUEST NAME</span>
+                  </div>
+                  <div>
+                    <span style="display:block; font-size:8px; opacity:0.6">Expires</span>
+                    <span class="payment-card-expiry">MM/YY</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form input fields -->
+              <div class="grid grid-2 mb-4">
+                <div class="form-group">
+                  <label class="form-label" for="card-number">Credit Card Number</label>
+                  <input type="text" id="card-number" class="form-input" placeholder="4000 1234 5678 9010" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="card-name">Card Holder Name</label>
+                  <input type="text" id="card-name" class="form-input" placeholder="GUEST NAME" required>
+                </div>
+              </div>
+              
+              <div class="grid grid-2 mb-4">
+                <div class="form-group">
+                  <label class="form-label" for="card-expiry">Expiration Date</label>
+                  <input type="text" id="card-expiry" class="form-input" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="card-cvv">CVV Code</label>
+                  <input type="password" id="card-cvv" class="form-input" placeholder="***" required>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 5 PANEL -->
+          <div class="reservation-step-panel">
+            <div class="success-checkmark-box">
+              <div class="success-circle">✓</div>
+              <h2 class="section-title text-accent">Table Confirmed!</h2>
+              <p class="mb-6">Thank you for booking with Aurum. A reservation email receipt has been sent to your address.</p>
+              
+              <!-- Final details layout -->
+              <div id="final-receipt-summary">
+                <!-- Rendered by JS -->
+              </div>
+
+              <div class="flex gap-4 justify-center mt-6">
+                <button class="btn btn-primary" onclick="window.print()">🖨️ Print Receipt</button>
+                <a href="customer/index.html" class="btn btn-secondary">Go to Customer Portal</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Control navigation buttons -->
+          <div class="reservation-actions-row">
+            <button id="btn-prev-step" class="btn btn-ghost">Previous Step</button>
+            <button id="btn-next-step" class="btn btn-primary">Next Step</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4 grid-auto-sm mb-12">
+        <div>
+          <h3 class="nav-logo mb-4" style="padding:0">
+            <svg class="nav-logo-icon" viewBox="0 0 100 100" fill="currentColor">
+              <polygon points="50,10 90,80 10,80" fill="none" stroke="var(--color-gold)" stroke-width="4"/>
+              <circle cx="50" cy="50" r="15" fill="var(--color-gold)"/>
+            </svg>
+            <span>Aurum</span>
+          </h3>
+          <p class="footer-desc">Crafting world-class culinary experiences combining tradition and modern innovations since 2010.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <nav class="footer-links">
+            <a href="index.html#about" class="footer-link">Our Story</a>
+            <a href="menu.html" class="footer-link">Digital Menu</a>
+            <a href="gallery.html" class="footer-link">Photo Gallery</a>
+            <a href="private-dining.html" class="footer-link">Private Dinings</a>
+            <a href="events.html" class="footer-link">Special Events</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Dining Hours</h4>
+          <div class="footer-hours-list">
+            <div class="footer-hours-row">
+              <span class="footer-hours-day">Lunch:</span>
+              <span class="footer-hours-time">12:00 PM - 3:00 PM</span>
+            </div>
+            <div class="footer-hours-row">
+              <span class="footer-hours-day">Dinner:</span>
+              <span class="footer-hours-time">6:00 PM - 11:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <p class="text-sm mb-4">42 Rue de la Gastronomie, Paris</p>
+          <p class="text-sm">📞 +33 1 42 86 87 88</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Aurum Restaurant. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTAs -->
+  <button class="back-to-top" aria-label="Scroll back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/utils.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/reservation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

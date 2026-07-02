@@ -1,0 +1,299 @@
+/* ============================================
+   AURUM — Reservation Flow Page Styles
+   ============================================ */
+
+/* Container & Step Card */
+.reservation-flow-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 480px;
+  position: relative;
+}
+
+.reservation-step-panel {
+  display: none;
+}
+
+.reservation-step-panel.active {
+  display: block;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* ── Step 1: Date & Time Picker Grid ── */
+.booking-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-2);
+  text-align: center;
+  margin-bottom: var(--space-6);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  background: var(--bg-surface);
+}
+
+.calendar-day-header {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.calendar-day-btn {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.calendar-day-btn:hover:not(.disabled) {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.calendar-day-btn.active {
+  background: var(--color-gold);
+  color: var(--color-black) !important;
+  font-weight: var(--weight-bold);
+}
+
+.calendar-day-btn.disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+/* Time slots grid */
+.booking-time-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.time-slot-btn {
+  padding: var(--space-3) 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: var(--bg-surface);
+}
+
+.time-slot-btn:hover:not(.disabled) {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.time-slot-btn.active {
+  background: var(--color-gold);
+  color: var(--color-black);
+  border-color: var(--color-gold);
+  font-weight: var(--weight-semibold);
+}
+
+.time-slot-btn.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background: rgba(0,0,0,0.1);
+  text-decoration: line-through;
+}
+
+/* Seating zones grid */
+.seating-zones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.seating-zone-card {
+  padding: var(--space-4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: var(--bg-surface);
+}
+
+.seating-zone-card:hover {
+  border-color: var(--border-gold);
+}
+
+.seating-zone-card.active {
+  border-color: var(--color-gold);
+  background: var(--color-gold-muted);
+}
+
+.zone-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.zone-avail-indicator {
+  font-size: var(--text-xs);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* ── Step 3: Summary details list card ── */
+.summary-receipt-card {
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  background: var(--bg-surface);
+  margin-bottom: var(--space-6);
+}
+
+.summary-receipt-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-3) 0;
+}
+
+.summary-receipt-row:last-child {
+  border-bottom: none;
+}
+
+.summary-receipt-label {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.summary-receipt-val {
+  font-weight: var(--weight-medium);
+  font-size: var(--text-sm);
+}
+
+.coupon-row {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+/* ── Step 4: Payment Form Card details ── */
+.payment-card-visual {
+  height: 180px;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto var(--space-6);
+  background: linear-gradient(135deg, #1c1510, #362e26);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  position: relative;
+  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.payment-card-chip {
+  width: 40px;
+  height: 30px;
+  background: var(--gradient-gold);
+  border-radius: var(--radius-sm);
+}
+
+.payment-card-number {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  letter-spacing: var(--tracking-wider);
+}
+
+.payment-card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
+/* Payment method radio boxes */
+.payment-methods-row {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.payment-method-card {
+  flex: 1;
+  padding: var(--space-4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  text-align: center;
+  transition: all var(--transition-fast);
+  background: var(--bg-surface);
+}
+
+.payment-method-card:hover {
+  border-color: var(--border-gold);
+}
+
+.payment-method-card.active {
+  border-color: var(--color-gold);
+  background: var(--color-gold-muted);
+}
+
+/* ── Step 5: Success animation ── */
+.success-checkmark-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-8) 0;
+}
+
+.success-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(46, 139, 87, 0.1);
+  border: 2px solid var(--color-emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: var(--color-emerald);
+  margin-bottom: var(--space-6);
+  animation: scaleIn 0.5s var(--ease-bounce) forwards;
+}
+
+.reservation-actions-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-8);
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--space-6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .seating-zones-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  
+  .payment-methods-row {
+    flex-direction: column;
+  }
+}
